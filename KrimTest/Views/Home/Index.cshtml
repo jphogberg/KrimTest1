@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Kriminalvården";
+}
+
+<div class="container fluid">
+    <div>
+        <form action="https://www.google.com/search?q=" class="searchform" method="get" name="searchform" id="searchbox">
+            <img class="img-fluid img-center img-krim" src="~/images/logo.png" alt="logo.png" title="Kriminalvården" asp-append-version="true" />
+            <div class="radio-search mx-auto">
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" class="custom-control-input" id="googleRadio" name="googlebingRadio" onclick="document.getElementById('searchbox').action='http://www.google.com/search?q=';" checked="checked" />
+                    <label class="custom-control-label" for="googleRadio">Sök på Google</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" class="custom-control-input" id="bingRadio" name="googlebingRadio" onclick="document.getElementById('searchbox').action='http://www.bing.com/search?q=';" />
+                    <label class="custom-control-label" for="bingRadio">Sök på Bing</label>
+                </div>
+            </div>
+            <div class="d-search ds-main">
+                <input class="form-control search-form-control sfc-main" type="search" autocapitalize="off" placeholder="Sök.." aria-label="Sök" name="q" id="searchInput" title="Sök">
+                <button type="submit" class="sb-icon float-right submit-btn-search"><i class="mdi mdi-magnify"></i></button>
+                <input class="btn btn-primary my-3 submit-btn-search d-none d-lg-block" type="submit" value="Sök" aria-label="Sök" id="searchBtn" />
+            </div>
+        </form>
+    </div>
+</div>
